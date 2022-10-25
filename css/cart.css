@@ -1,0 +1,361 @@
+*{font-family:arial,sans-serif;
+color:#584A48;
+background-color: #FFF3EC;}
+
+#h{
+    display:flex;
+    justify-content: space-between;
+    height: 100%;
+  width:100%;
+}
+
+
+#p{
+    
+width:100%;
+  height: 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#pp{height:30%;}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  color:#584A48;
+  font-family:Cursive;
+  position:absolute;
+  top:80%;
+  left:10%;
+}
+
+.button:hover{
+    color:black;
+    background-color: #AF836C;
+}
+
+
+h1{text-align: Center;}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 0.2px solid #EFDFD7;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* ********************************login**************************************/
+
+.login-form{
+    background-color:white;
+    
+
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: white;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "arial", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background:#584A48;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #AF836C;
+}
+
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+/* ********************************Search All**************************************/
+
+hr{color:#584A48;}
+
+.genre{font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background:#584A48;
+  border:sloid 0.1px white;
+  width:20%;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;}
+
+
+.genre:hover{color:black;}
+
+
+/* ********************************Search All**************************************/
+
+#add button{font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  background:#584A48;
+  width:20%;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+margin:auto;}
+
+#add button:hover{color:black;}
+
+
+
+.grid-item .a span {display:none;
+        position:absolute;}
+
+.grid-item .a:hover span{display:block;}
+
+
+
+
+
+/* ********************************Cart page**************************************/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px; 
+  
+}
+
+.list-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 0.2px solid #EFDFD7;
+  padding: 20px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.qty {
+  background-color: rgba(255, 255, 255, 0.8); 
+  border: 0.2px solid #EFDFD7;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  
+}
+
+.Pname{
+    text-align: center;
+    font-size: 30px;
+}
+
+.info{
+    
+    text-align: center;
+     border-color: rgba(255, 255, 255, 0.8);
+     margin-top: -270px;
+     margin-left: 410px;
+     
+     border: 1px groove;
+     width: 800px;
+     height: 250px;
+       
+}
+
+hr{background-color: #584A48;}
+
+.checkout:hover{background-color: #AF836C;}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Set a style for all buttons */
+button {
+  
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Float cancel and delete buttons and add an equal width */
+.cancelbtn, .deletebtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add a color to the cancel button */
+.cancelbtn {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Add a color to the delete button */
+.deletebtn {
+  background-color: #f44336;
+}
+
+/* Add padding and center-align text to the container */
+.container {
+  padding: 16px;
+  text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: transparent;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #584A48; 
+  margin-bottom: 25px;
+}
+ 
+/* The Modal Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .deletebtn {
+     width: 100%;
+  }
+}
+
+.sum {
+    
+     text-align: left;
+     border-color: rgba(255, 255, 255, 0.8);
+     margin-top: 40px;
+     margin-left: 10px ;
+     width: 100%;
+     height: 350px;
+    
+}
+
+.h1{
+  text-align: left;  
+}
+
+.checkout {
+    
+  border-radius: 12px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  background:#584A48;
+  width:20%;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+margin:auto;
+
+}
+
+
+
+*{font-family:arial,san-serif;}
+
+ul{
+    
+text-align: center;
+ margin-top: 270px;
+     margin-left: 410px;
+ margin-top: -110px;
+  margin-right: 150px;
+   
+  
+
+}
+li{
+    display: inline;
+margin-bottom: -80px;
+  padding: 30px;
+  
+}
+
+

@@ -1,0 +1,105 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 06-Oct-2022, 17:59:35
+    Author     : jumma
+*/
+*{font-family:Arial, sans-serif;
+color:#584A48;
+background-color: #FFF3EC;}
+
+#h{
+    display:flex;
+    justify-content: space-between;
+    height: 100%;
+  width:100%;
+}
+
+hr{
+color:#584A48;
+}
+
+#pc{
+   height: 370px;
+   width: 400px;
+    border-style: dashed;  
+ box-shadow: 1px 3px #888888;
+}
+
+#pc:hover {
+  opacity: 0.5 ;
+   box-shadow: 3px 5px #888888;
+}
+
+#pc2:hover {
+  
+   box-shadow: 3px 5px #888888;
+}
+
+.rectangle {
+  height: 60px;
+  width: 300px;
+  background-color: white;
+  border-style: solid;
+  padding: 10px;
+  box-shadow: 1px 3px #888888;
+  border-width: medium;
+ 
+}
+.rectangle2 {
+  height: 10px;
+  width: 300px;
+  background-color: white;
+  border-style: solid;
+   display: flex;
+   padding: 10px;
+  box-shadow: 1px 3px #888888;
+  border-width: medium;
+}
+
+
+
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.container > div {
+ 
+  margin: 20px;
+  
+  line-height: 10px;
+ 
+}
+#gn{
+   float: right;
+   background-color: white;
+   border-width: medium;
+}
+.but{
+    text-align: center;
+}
+.mbut{
+    
+   border-radius: 12px;
+   font-family: "Roboto", sans-serif ;
+   text-transform: uppercase;
+   background: #584A48;
+   width:20%;
+   padding:15px;
+   color: #FFFFFF;
+   font-size: 14px;
+   cursor: pointer;
+   margin: auto;
+   border-color:#584A48 ;
+   
+}
+
+.mbut:hover {
+    background-color: #AF836C;
+    border-color:#AF836C; 
+  
+ 
+}

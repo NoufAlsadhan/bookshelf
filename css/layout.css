@@ -1,0 +1,297 @@
+@charset "utf-8";
+
+
+
+
+#h{
+    display:flex;
+    justify-content: space-between;
+    height: 100%;
+  width:100%;
+}
+
+#cart{font-size:40px; color:#584A48;}
+
+html{overflow-y:scroll;}
+body{margin:0; padding:0; font-size:12px; font-family:verdana, Arial, Helvetica, sans-serif;color:#584A48;  background-color: #FFF3EC;}
+
+.justify{text-align:justify;}
+.bold{font-weight:bold;}
+.center{text-align:center;}
+.right{text-align:right;}
+.nostart{margin:0; padding:0; list-style-type:none;}
+
+.clear{clear:both;
+color:#584A48;}
+br.clear{clear:both; margin-top:-15px;}
+
+a{outline:none; text-decoration:none;}
+
+.fl_left, .imgl{float:left;}
+.fl_right, .imgr{float:right;}
+
+img{display:block; margin:0; padding:0; border:none;}
+.imgl, .imgr{border:1px solid #999999; padding:5px;}
+.imgl{margin:0 8px 8px 0; clear:left;}
+.imgr{margin:0 0 8px 8px; clear:right;}
+
+/* ----------------------------------------------Wrapper------------------------------------- */
+
+div.wrapper{display:block; position:relative; width:960px; margin:0 auto;}
+h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:20px; font-weight:normal; line-height:normal; font-family:Georgia, "Times New Roman", Times, serif;}
+
+/* ----------------------------------------------Generalise------------------------------------- */
+
+#header, #topbar, #homecontent, #imageline, #container, #breadcrumb, #footer{display:block; width:960px;}
+
+/* ----------------------------------------------Header------------------------------------- */
+
+
+
+/* ----------------------------------------------Header------------------------------------- */
+
+#topbar{padding:20px 0 0 0;}
+#topbar .fl_left p{margin:0 0 6px 0; padding:0;}
+
+/* ----------------------------------------------Homepage Intro------------------------------------- */
+
+#intro{display:block; width:900px; margin:5px 0 0 0; padding:30px; color:#584A48; background-color:rgba(255, 255, 255, 0.8); font-family:Georgia, "Times New Roman", Times, serif;}
+#intro a{color:#C80000; background-color:#F0F0F0;}
+#intro .fl_left{display:block; float:left; width:360px;}
+ 
+#intro .fl_right{display:block; float:right; width:500px;}
+#intro .fl_right h2, #intro .fl_right ul, #intro .fl_right p{margin:0; padding:0; list-style:none; line-height:normal;}
+#intro .fl_right h2{font-size:42px; margin:15px 0;}
+#intro .fl_right p{line-height:1.6em; font-size:18px;}
+#intro .fl_right label{line-height:1.6em; font-size:18px;}
+
+
+
+  
+  .checked{ /*stars*/ 
+  color: orange;
+  font-size: 20px;
+}
+.fa fa-star{
+color: orange;
+  font-size: 20px;}
+    a:hover{border-bottom: 1px solid #111;} 
+    h1{font-size: 2em; padding: 20px 0;}
+    p{
+      font-size: 14px;
+      padding: 20px 0;
+    }
+
+    button:hover{cursor: pointer}
+    button {
+      background: transparent; outline: none;
+      position: relative;
+      border: 2px solid #111;
+      padding: 15px 50px;
+      overflow: hidden;
+    }
+
+    /*button:before (attr data-hover)*/
+    button:hover:before{opacity: 1; transform: translate(0,0);}
+    button:before{
+      content: attr(data-hover);
+      position: absolute;
+      top: 1.1em; left: 0;
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 800;
+      font-size: .8em;
+      opacity: 0;
+      transform: translate(-100%,0);
+      transition: all .3s ease-in-out;
+    }
+      /*button div (button text before hover)*/
+      button:hover div{opacity: 0; transform: translate(100%,0)}
+      button div{
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 800;
+        font-size: .8em;
+        transition: all .3s ease-in-out;
+      }
+
+
+
+
+/* ----------------------------------------------Homepage Content------------------------------------- */
+
+#homecontent{padding:30px 0 25px 0;}
+#homecontent ul{display:inline; margin:0; padding:0; list-style:none;}
+#homecontent li{display:block; float:left; width:290px; margin:0 45px 0 0;}
+#homecontent li.last{margin-right:0;}
+#homecontent h2{margin-bottom:15px;}
+#homecontent p{margin:0 0 20px 0; line-height:1.4em;}
+#homecontent p.readmore{margin-bottom:5px;}
+#homecontent p.readmore a{margin-bottom:0; padding:5px 15px; font-weight:bold; line-height:normal; color:#C80000; background-color:#F0F0F0;}
+#imageline{padding:30px 0; border-top:1px dotted #999999;}
+#imageline ul{display:inline; margin:0; padding:0; list-style:none;}
+#imageline li{display:block; float:left; margin:0 10px 0 0; padding:4px; border:1px solid #999999;}
+#imageline li.last{margin-right:0;}
+
+/* ----------------------------------------------BreadCrumb------------------------------------- */
+
+
+/* ----------------------------------------------Content------------------------------------- */
+
+
+/* ----------------------------------------------Column------------------------------------- */
+
+
+
+/* ----------------------------------------------Footer------------------------------------- */
+
+
+/* ----------------------------------------------Copyright------------------------------------- */
+
+
+
+
+/*button*/ 
+
+.button-40 {
+  background-color: #584A48;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: .75rem 1.2rem;
+  text-align: center;
+  text-decoration: none #6B7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: .2s;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+}
+
+.button-40:hover {
+  background-color: #AF836C;
+}
+
+.button-40:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .button-40 {
+    padding: .75rem 1.5rem;
+  }
+}
+
+
+
+
+.button-41 {
+  background-color: #584A48;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+ 
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: .75rem 1.2rem;
+ 
+
+  float:right;
+  text-decoration: none #6B7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: .2s;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+}
+
+.button-41:hover {
+  background-color: #AF836C;
+}
+
+.button-41:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .button-41 {
+    padding: .75rem 1.5rem;
+  }
+}
+
+
+/*button review*/
+
+
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container textarea[type=textarea] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+
+/* Set a style for the submit button */
+.form-container .btn {
+  background-color: #584A48;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
