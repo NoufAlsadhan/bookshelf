@@ -2,10 +2,7 @@
 
 
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
+
 <html>
     <head>
         <title>View</title>
@@ -31,36 +28,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                <button class="btn" onclick="return confirm('Are you sure you want to delete this item?');"> <a href="deletebook.php?isbn=<?php echo $row['isbn']?>"> <i class="fa fa-trash" ></i></a></button><?php
     echo '</div>'.$row["name"].'<br></div>'; }?>
 </div>
-       <div id="id01" class="modal">
-  <form class="modal-content">
-    <div class="container">
-      <p>Are you sure you want to delete this item?</p>
-    
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'; click(false)" class="cancelbtn">Cancel</button>
-        <button type="button" onclick="document.getElementById('id01').style.display='none'; click(true)" class="deletebtn">Delete</button>
-      </div>
-    </div>
-  </form>
-</div> 
-        <script>
-// Get the modal
-var modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-  
-  function click(v){
-      return v;
-      
-    }
-    
-    
-  }
-}
-</script>
     </body>
 </html>
