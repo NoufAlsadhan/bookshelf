@@ -10,8 +10,6 @@
                 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
-            
-            
             $errs = array();
             $isbn=$_POST['isbn'];
     $sql1 = "select * from book where isbn='$isbn'";
