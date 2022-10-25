@@ -2,10 +2,7 @@
 
 
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
+
 <html>
     <head>
         <?php
@@ -83,13 +80,13 @@ echo '<META HTTP-EQUIV="Refresh" Content="2; URL=admin.php">';
          
          <div class="container" >
              <div class="left" >
-         <h3> Breif :</h3>
+         <h3> Brief:</h3>
          <textarea class="rectangle" name="brief" required rows="4" cols="50"></textarea>
              
              
          
          <h3>Available quantity :</h3>
-         <input class="rectangle2" name="available_quantity" required type="number" min="0" max="50" >
+         <input class="rectangle2" name="available_quantity" required type="number" min="0" max="500" >
       
          
          <h3>Number of pages :</h3>
