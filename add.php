@@ -46,7 +46,11 @@ $dist=$tr.$file_name;
        if(empty($errs)) {
         $sql="INSERT INTO book VALUES ('$isbn', '$name','$author_name','$price', '$available_quantity', '$num_pages','$brief','$genre','$dist')";
                 $run = mysqli_query($link,$sql);
-echo '<META HTTP-EQUIV="Refresh" Content="2; URL=admin.php">';
+                
+                echo '<div class="alert alert-success">';
+        echo "The book has been added sucessfully!";
+        echo '</div>';
+echo '<META HTTP-EQUIV="Refresh" Content="1.5; URL=admin.php">';
         }
         else {
         echo "<div class='alert alert-danger text-center'>";
