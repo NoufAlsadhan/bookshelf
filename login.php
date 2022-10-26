@@ -30,7 +30,7 @@ if(isset($_POST['login'])){
     if($count==1){
         if (password_verify($password, $row['password'])){
             
-         echo '<META HTTP-EQUIV="Refresh" Content="2; URL=admin.php">';    
+         echo '<META HTTP-EQUIV="Refresh" Content="1; URL=admin.php">';    
             exit;
         } else {
             echo "<div class='alert alert-danger text-center'>";
