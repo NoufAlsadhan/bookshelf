@@ -67,7 +67,10 @@ $dist=$tr.$file_name;
     }
             
         mysqli_query($link,$sql3);
-echo '<META HTTP-EQUIV="Refresh" Content="2; URL=admin.php">';
+        echo '<div class="alert alert-success">';
+        echo "The book has been updated sucessfully!";
+        echo '</div>';
+echo '<META HTTP-EQUIV="Refresh" Content="1.5; URL=admin.php">';
         }
         else {
         echo "<div class='alert alert-danger text-center'>";
@@ -95,10 +98,9 @@ echo '<META HTTP-EQUIV="Refresh" Content="2; URL=admin.php">';
          <form action="" method="POST" enctype="multipart/form-data">
          <h3> Book picture : </h3>
          
-          <label for="image">
-              <input type="file" name="myfile" id="image" style="display:none;"/>
-         <img id = "pc" src="<?php echo $row["image"]?>" width="120" height="120">
-          </label>
+          
+              <input type="file" name="myfile" id="image"/>
+         
          
          <div class="container" >
              <div class="left" >
