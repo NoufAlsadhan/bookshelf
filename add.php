@@ -22,7 +22,6 @@
     }
             $name=$_POST['name'];
             $author_name=$_POST['author_name'];
-            $price=$_POST['price'];
             $brief=$_POST['brief'];
             $genre=$_POST['genre'];
             if(is_numeric( $_POST['available_quantity'] )) {
@@ -34,6 +33,12 @@
         $num_pages = $_POST['num_pages'];
     } else {
         $errs[] = 'Number of pages must be number';
+    }
+    
+    if(is_numeric( $_POST['price'] )) {
+        $price = $_POST['price'];
+    } else {
+        $errs[] = 'price must be number';
     }
             
 
@@ -107,7 +112,7 @@ echo '<META HTTP-EQUIV="Refresh" Content="1.5; URL=admin.php">';
          
          
           <h3>Price :</h3>
-         <input  class="rectangle2"required type="text" name="price" >   
+         <input  class="rectangle2"required type="number" name="price" min='0' max='500'>   
         
          
          
