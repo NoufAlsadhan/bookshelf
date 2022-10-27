@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
             $name=$_POST['name'];
             $author_name=$_POST['author_name'];
-            $price=$_POST['price'];
+           
             $brief=$_POST['brief'];
             $genre=$_POST['genre'];
             if(is_numeric( $_POST['available_quantity'] )) {
@@ -50,6 +50,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $num_pages = $_POST['num_pages'];
     } else {
         $errs[] = 'Number of pages must be number';
+    }
+    
+    if(is_numeric( $_POST['price'] )) {
+        $price = $_POST['price'];
+    } else {
+        $errs[] = 'Price must be a number only';
     }
     
     $file_name = $_FILES['myfile']['name'];
@@ -115,7 +121,7 @@ echo '<META HTTP-EQUIV="Refresh" Content="1.5; URL=admin.php">';
       
          
          <h3>Number of pages :</h3>
-         <input  class="rectangle2" type="text" name='num_pages' value="<?php echo $row["num_pages"]?>">
+         <input  class="rectangle2" type="number" name='num_pages' value="<?php echo $row["num_pages"]?>">
          
          <h3>Author name:</h3>
          <input  class="rectangle2" type="text" name='author_name' value="<?php echo $row["author_name"]?>">
@@ -130,7 +136,7 @@ echo '<META HTTP-EQUIV="Refresh" Content="1.5; URL=admin.php">';
          
          
           <h3>Price :</h3>
-         <input  class="rectangle2" type="text" name='price' value="<?php echo $row["price"]?>">   
+         <input  class="rectangle2" type="number" name='price' value="<?php echo $row["price"]?>" min='0' max='500'>   
          
          
          
@@ -145,7 +151,6 @@ echo '<META HTTP-EQUIV="Refresh" Content="1.5; URL=admin.php">';
             <option <?php if($row["genre"]=="Mystery") echo "selected";?>> Mystery </option> 
             <option <?php if($row["genre"]=="Crime") echo "selected";?>> Crime </option> 
             <option <?php if($row["genre"]=="Education") echo "selected";?>> Education </option>
-            <option <?php if($row["genre"]=="All") echo "selected";?>> ALL </option>
             
         </select>
            </h3>
