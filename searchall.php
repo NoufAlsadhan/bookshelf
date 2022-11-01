@@ -15,7 +15,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script><!-- comment -->
-
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
             </script>
     </head>
     <body>
