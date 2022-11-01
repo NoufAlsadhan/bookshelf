@@ -127,18 +127,7 @@ h1{text-align: Center;}
 
 hr{color:#584A48;}
 
-.genre{font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  outline: 0;
-  background:#584A48;
-  border:sloid 0.1px white;
-  width:20%;
-  padding: 15px;
-  color: #FFFFFF;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;}
+
 
 
 .genre:hover{color:black;}
@@ -352,4 +341,17 @@ body {
   cursor: pointer
 }
 
+.genre1{font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background:#584A48;
+  border:sloid 0.1px white;
+  width:20%;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
 
