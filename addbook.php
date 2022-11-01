@@ -14,7 +14,7 @@ addItem($_GET['isbn'],$row1['name'],$row1['price'],$row1['image']);
                  $sql="INSERT INTO cart VALUES ('$isbn', '$name','$price','$image')";
     $result = mysqli_query($link, $sql);
    
-   header('Location: ' . $_SERVER['HTTP_REFERER']);
+   header('Location: ' . $_SERVER['HTTP_REFERER'].'?genre=All');
                     
                 }
                 
