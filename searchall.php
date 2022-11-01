@@ -16,7 +16,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script><!-- comment -->
            if ( window.history.replaceState ) {
-  window.history.replaceState( null, null, window.location.href );
+  window.history.replaceState( null, null, window.location.href+"?genre=All" );
 } 
             </script>
     </head>
@@ -53,8 +53,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
     $run = mysqli_query($link,$sql);
     while($row= mysqli_fetch_assoc($run)){
            echo '<div class="grid-item"><img class="pic" src='.$row["image"].'><br><div class="change_icons">';?>
-               <button class="btn"> <a href=''> <i class="fa fa-eye" ></i></a></button>
-               <button class="btn"> <a href=''> <i class="fa fa-shopping-cart" ></i></a></button>
+               <button class="btn"> <a href="view.php?isbn=<?php echo $row['isbn']?>"> <i class="fa fa-eye" ></i></a></button>
+               <button class="btn"> <a href="addbook.php?isbn=<?php echo $row['isbn']?>"> <i class="fa fa-shopping-cart" ></i></a></button>
                 <?php
             echo '</div>'.$row["name"].'<br></div>'; }}?>
                
