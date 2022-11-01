@@ -52,7 +52,7 @@
                <br/>
                <p>Price: <?php echo $row["price"] ?>SR</p>
                <br/> <br/> <br/>
-               <button class="button-40" role="button">Add to Cart</button>
+               <button class="button-40" role="button"><a href="addbook.php?isbn=<?php echo $row['isbn']?>">Add to Cart</a></button>
             </div>
             <br class="clear" />
          </div>
