@@ -14,7 +14,7 @@
     <body>
         <div id="h"><img src="img/logo.png" height=80 width=160><a href="login.php"><img src="img/login.png"height=50 width=120></a></div>
         <div id="pp"><img src="img/bg1.jpg" id="p"></div>
-        <a href="searchall.html"><button class="button">SHOP NOW!</button></a>
+        <a href="searchall.php?genre=All"><button class="button">SHOP NOW!</button></a>
         
         <h1> Last Releases</h1>
         
