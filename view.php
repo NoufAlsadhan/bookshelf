@@ -5,6 +5,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
       <link rel="stylesheet" href="css/layout.css" type="text/css" />
+      <link rel="stylesheet" href="css/star.css" type="text/css" />
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
    </head>
    <body>
@@ -24,12 +25,20 @@
          </div>
          <!-- ####################################################################################################### -->
          <div id="intro">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <br>
+             <?php
+             $sql5="Select Avg(rate) as avg from review where book_isbn=".$_GET['isbn'];
+             $result5=mysqli_query($link,$sql5);
+             $row5=mysqli_fetch_assoc($result5);
+             $avg=round($row5['avg']);
+             for($i=0;$i<$avg;$i++){
+             echo '<span class="fa fa-star checked"></span>';}
+                
+            for($i=0;$i<5-$avg;$i++){
+           echo' <span class="fa fa-star"></span>';
+            }
+            
+            ?>
+             <br>
              <?php
         $isbn= $_GET['isbn'];
         $sql= "SELECT * FROM book where isbn=".$isbn;
@@ -52,7 +61,7 @@
                <br/>
                <p>Price: <?php echo $row["price"] ?>SR</p>
                <br/> <br/> <br/>
-               <button class="button-40" role="button"><a href="addbook.php?isbn=<?php echo $row['isbn']?>">Add to Cart</a></button>
+               <button class="button-40" role="button"><a id='addd' href="addbook.php?isbn=<?php echo $row['isbn']?>">Add to Cart</a></button>
             </div>
             <br class="clear" />
          </div>
@@ -70,18 +79,24 @@
             <button class="button-41" role="button" onclick="openForm()"> + Add Review</button>    
             <h2>Reviews</h2>
             <div class="form-popup" id="myForm">
-               <form class="form-container">
-                  <label for="name"><b>Name:</b></label>
+               <form class="form-container" action="review.php" method="POST">
                   <input type="text" placeholder="Enter your name" name="name" required>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star"></span>
+                  <div class="rate">
+    <input type="radio" id="star5" name="rate" value="5" />
+    <label for="star5" title="text">5 stars</label>
+    <input type="radio" id="star4" name="rate" value="4" />
+    <label for="star4" title="text">4 stars</label>
+    <input type="radio" id="star3" name="rate" value="3" />
+    <label for="star3" title="text">3 stars</label>
+    <input type="radio" id="star2" name="rate" value="2" />
+    <label for="star2" title="text">2 stars</label>
+    <input type="radio" id="star1" name="rate" value="1" />
+    <label for="star1" title="text">1 star</label>
+                  </div>
+                      <br> <br><br><br>
+                  <textarea type="textarea" id="w3review" name="review" rows="4" cols="30" required placeholder="Write your thoughts"></textarea>
                   <br> <br>
-                  <label for="w3review">Review: </label>
-                  <textarea type="textarea" id="w3review" name="w3review" rows="4" cols="30" required></textarea>
-                  <br> <br>
+                          <input type="hidden" name="id" value="<?php echo $isbn?>">
                   <button type="submit" class="btn">Share</button>
                   <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
                </form>
@@ -100,34 +115,23 @@
             <ul>
             <div id="homecontent">
                <ul>
-                  <li>
-                     <h2>Abdullah Mohammad</h2>
-                     <span class="fa fa-star checked"></span>
-                     <span class="fa fa-star checked"></span>
-                     <span class="fa fa-star checked"></span>
-                     <span class="fa fa-star checked"></span>
-                     <span class="fa fa-star"></span>
-                     <p>This book is amazing</p>
-                  </li>
-                  <li>
-                     <h2>Omar Sultan</h2>
-                     <span class="fa fa-star checked"></span>
-                     <span class="fa fa-star checked"></span>
-                     <span class="fa fa-star checked"></span>
-                     <span class="fa fa-star "></span>
-                     <span class="fa fa-star"></span>
-                     <p> This book is beautiful</p>
-                  </li>
-                  <li class="last">
-                     <h2>Aljawharah Ibrahim</h2>
-                     <span class="fa fa-star checked"></span>
-                     <span class="fa fa-star checked"></span>
-                     <span class="fa fa-star checked"></span>
-                     <span class="fa fa-star checked"></span>
-                     <span class="fa fa-star checked"></span>
-                     <p> This book is interesting</p>
-                  </li>
-               </ul>
+                   <?php
+                   $sql4="Select * from review where book_isbn=".$isbn;
+                   $result4=mysqli_query($link,$sql4);
+                   while($row4=mysqli_fetch_assoc($result4)){
+                  echo '<li>';
+                     echo '<h2>'.$row4['name'].'</h2>';
+                     for($i=0;$i<$row4['rate'];$i++){
+                     echo '<span class="fa fa-star checked"></span>';
+                     }
+                     
+                     for($i=0;$i<5-$row4['rate'];$i++){
+                     echo'<span class="fa fa-star"></span>';}
+                     
+                     echo'<p>'.$row4['review'].'</p>';
+                   echo'</li>';}
+                 ?>
+                   </ul>
                <br class="clear" />
             </div>
          </div>
