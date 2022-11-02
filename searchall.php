@@ -45,11 +45,27 @@ if ( window.history.replaceState ) {
                 $sql = "select * from book";
     $run = mysqli_query($link,$sql);
     while($row= mysqli_fetch_assoc($run)){
-           echo '<div class="grid-item"><img class="pic" src='.$row["image"].'><br><div class="change_icons">';?>
+           echo '<div class="grid-item">';
+           
+          
+             $sql5="Select Avg(rate) as avg from review where book_isbn=".$row['isbn'];
+             $result5=mysqli_query($link,$sql5);
+             $row5=mysqli_fetch_assoc($result5);
+             $avg=round($row5['avg']);
+             for($i=0;$i<$avg;$i++){
+             echo '<span class="fa fa-star checked"></span>';}
+                
+            for($i=0;$i<5-$avg;$i++){
+           echo' <span class="fa fa-star"></span>';
+            }
+           
+           echo'<br>';
+           
+        echo '<img class="pic" src='.$row["image"].'><br><div class="change_icons">';?>
                <button class="btn"> <a href="view.php?isbn=<?php echo $row['isbn']?>"> <i class="fa fa-eye" ></i></a></button>
                <button class="btn"> <a href="addbook.php?isbn=<?php echo $row['isbn']?>"> <i class="fa fa-shopping-cart" ></i></a></button>
                 <?php
-            echo '</div>'.$row["name"].'<br></div>'; }}?>
+            echo '</div>'.$row["name"].'<br>'.$row['price'].'SR</div>'; }}?>
                
         </div>
                
@@ -82,7 +98,7 @@ if ( window.history.replaceState ) {
                               <button class="btn"> <a href="view.php?isbn=<?php echo $row['isbn']?>"> <i class="fa fa-eye" ></i></a></button>
                               <button class="btn" ><a href="addbook.php?isbn=<?php echo $row['isbn']?>"><i class="fa fa-shopping-cart"></i></a></button></div>
                <?php
-               echo $row["name"].'<br></div>';} echo '</div>';}?> 
+               echo $row["name"].'<br>'.$row['price'].'SR</div>';} echo '</div>';}?> 
                      
 
 </div>
