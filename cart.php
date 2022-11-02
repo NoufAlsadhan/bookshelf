@@ -61,6 +61,8 @@
       
         echo "<h2>Total :  ".($Ftot+$tot)." "."SR";
         
+        
+        
     }
     
     add($Ftot,$tot);
@@ -77,20 +79,26 @@
         
        
   }
-    
-            
             ?>
    
-           
+      
+       
 <script>
-function myFunction() {
+
+function myFunction(Ftot) {
+    
+    if(Ftot!=0) {
+        
   alert("Your order is sent successfully");
+
+}
+
 }
 </script>
  
-       
            
-            <div id="check"><button class="checkout" onclick="myFunction()">Checkout</button></div><hr>
+           
+            <div id="check"><button class="checkout"  onclick="myFunction(<?php echo mysqli_num_rows($run); ?>)">Checkout</button></div><hr>
            
             
             
