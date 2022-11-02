@@ -61,6 +61,8 @@ if ( window.history.replaceState ) {
            
            echo'<br>';
            
+           
+           
         echo '<img class="pic" src='.$row["image"].'><br><div class="change_icons">';?>
                <button class="btn"> <a href="view.php?isbn=<?php echo $row['isbn']?>"> <i class="fa fa-eye" ></i></a></button>
                <button class="btn"> <a href="addbook.php?isbn=<?php echo $row['isbn']?>"> <i class="fa fa-shopping-cart" ></i></a></button>
