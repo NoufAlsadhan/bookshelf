@@ -89,7 +89,7 @@ function myFunction(Ftot) {
     
     if(Ftot!=0) {
         
-  alert("Your order is sent successfully");
+  alert("Your order is sent successfully!");
 
 }
 
