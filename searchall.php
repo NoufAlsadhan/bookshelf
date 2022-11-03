@@ -65,12 +65,16 @@ if ( window.history.replaceState ) {
            
         echo '<img class="pic" src='.$row["image"].'><br><div class="change_icons">';?>
                <button class="btn"> <a href="view.php?isbn=<?php echo $row['isbn']?>"> <i class="fa fa-eye" ></i></a></button>
-               <button class="btn"> <a href="addbook.php?isbn=<?php echo $row['isbn']?>"> <i class="fa fa-shopping-cart" ></i></a></button>
+               <button class="btn" onclick='myFunction()'> <a href="addbook.php?isbn=<?php echo $row['isbn']?>"> <i class="fa fa-shopping-cart" ></i></a></button>
                 <?php
             echo '</div>'.$row["name"].'<br>'.$row['price'].'SR</div>'; }}?>
                
         </div>
-               
+               <script>
+function myFunction() {
+  alert("Book added to cart successfully!");
+}
+</script>
                
                <?php
               //$genra = $_POST['genre'];
@@ -96,9 +100,22 @@ if ( window.history.replaceState ) {
                         while($row = mysqli_fetch_assoc($result))
                         {
                          
-           echo '<div class="grid-item"><img class="pic" src='.$row["image"].'><br><div class="change_icons">';?>
+           echo '<div class="grid-item">';
+           
+           $sql6="Select Avg(rate) as avg from review where book_isbn=".$row['isbn'];
+             $result6=mysqli_query($link,$sql6);
+             $row6=mysqli_fetch_assoc($result6);
+             $avg2=round($row6['avg']);
+             for($i=0;$i<$avg2;$i++){
+             echo '<span class="fa fa-star checked"></span>';}
+             
+             for($i=0;$i<5-$avg2;$i++){
+           echo' <span class="fa fa-star"></span>';
+            }
+            echo'<br>';
+                            echo '<img class="pic" src='.$row["image"].'><br><div class="change_icons">';?>
                               <button class="btn"> <a href="view.php?isbn=<?php echo $row['isbn']?>"> <i class="fa fa-eye" ></i></a></button>
-                              <button class="btn" ><a href="addbook.php?isbn=<?php echo $row['isbn']?>"><i class="fa fa-shopping-cart"></i></a></button></div>
+                              <button class="btn" onclick='myFunction()'><a href="addbook.php?isbn=<?php echo $row['isbn']?>"><i class="fa fa-shopping-cart"></i></a></button></div>
                <?php
                echo $row["name"].'<br>'.$row['price'].'SR</div>';} echo '</div>';}?> 
                      
