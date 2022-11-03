@@ -93,7 +93,7 @@ echo '<META HTTP-EQUIV="Refresh" Content="1.5; URL=admin.php">';
              
          
          <h3>Available quantity :</h3>
-         <input class="rectangle2" name="available_quantity" required type="number" min="0" max="500" >
+         <input class="rectangle2" name="available_quantity" required type="number" min="1" max="500" >
       
          
          <h3>Number of pages :</h3>
