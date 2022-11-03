@@ -61,9 +61,15 @@
                <br/>
                <p>Price: <?php echo $row["price"] ?>SR</p>
                <br/> <br/> <br/>
-               <button class="button-40" role="button"><a id='addd' href="addbook.php?isbn=<?php echo $row['isbn']?>">Add to Cart</a></button>
+               <button class="button-40" role="button" onclick='myFunction()'><a id='addd' href="addbook.php?isbn=<?php echo $row['isbn']?>">Add to Cart</a></button>
             </div>
             <br class="clear" />
+            
+            <script>
+function myFunction() {
+  alert("Book added to cart successfully!");
+}
+</script>
          </div>
          <!-- ####################################################################################################### -->
          <div id="homecontent">
@@ -76,22 +82,22 @@
          </div>
          <!-- ####################################################################################################### -->
          <div id="imageline">
-            <button class="button-41" role="button" onclick="openForm()"> + Add Review</button>    
+            <button class="button-41" role="button" onclick="openForm()"> + Share your thoughts</button>    
             <h2>Reviews</h2>
             <div class="form-popup" id="myForm">
                <form class="form-container" action="review.php" method="POST">
                   <input type="text" placeholder="Enter your name" name="name" required>
                   <div class="rate">
     <input type="radio" id="star5" name="rate" value="5" />
-    <label for="star5" title="text">5 stars</label>
+    <label for="star5" title="5">5 stars</label>
     <input type="radio" id="star4" name="rate" value="4" />
-    <label for="star4" title="text">4 stars</label>
+    <label for="star4" title="4">4 stars</label>
     <input type="radio" id="star3" name="rate" value="3" />
-    <label for="star3" title="text">3 stars</label>
+    <label for="star3" title="3">3 stars</label>
     <input type="radio" id="star2" name="rate" value="2" />
-    <label for="star2" title="text">2 stars</label>
+    <label for="star2" title="2">2 stars</label>
     <input type="radio" id="star1" name="rate" value="1" />
-    <label for="star1" title="text">1 star</label>
+    <label for="star1" title="1">1 star</label>
                   </div>
                       <br> <br><br><br>
                   <textarea type="textarea" id="w3review" name="review" rows="4" cols="30" required placeholder="Write your thoughts"></textarea>
