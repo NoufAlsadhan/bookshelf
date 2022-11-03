@@ -16,7 +16,7 @@ addItem($_GET['isbn'],$row1['name'],$row1['price'],$row1['image']);
 }
 else
 {
-    header('Location: ' . $_SERVER['HTTP_REFERER'].'?genre=All');
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
 
                 
