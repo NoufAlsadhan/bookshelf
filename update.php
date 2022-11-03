@@ -111,27 +111,27 @@ echo '<META HTTP-EQUIV="Refresh" Content="1.5; URL=admin.php">';
          <div class="container" >
              <div class="left" >
          <h3> Brief :</h3>
-         <textarea class="rectangle" rows="4" cols="50" name='brief'>
+         <textarea class="rectangle" rows="4" cols="50" name='brief' max='500'>
 <?php echo $row["brief"]?></textarea>
              
              
          
          <h3>Available quantity :</h3>
-         <input class="rectangle2" type="number" min="0" max="50" name='available_quantity' value="<?php echo $row["available_quantity"]?>">
+         <input class="rectangle2" type="number" min="1" max="500" name='available_quantity' value="<?php echo $row["available_quantity"]?>">
       
          
          <h3>Number of pages :</h3>
-         <input  class="rectangle2" type="number" name='num_pages' value="<?php echo $row["num_pages"]?>">
+         <input  class="rectangle2" type="number" name='num_pages' max='10000' value="<?php echo $row["num_pages"]?>">
          
          <h3>Author name:</h3>
-         <input  class="rectangle2" type="text" name='author_name' value="<?php echo $row["author_name"]?>">
+         <input  class="rectangle2" type="text" name='author_name' max='30' value="<?php echo $row["author_name"]?>">
          
          </div>
           
            <div class="right">
          
           <h3>Name :</h3>
-         <input  class="rectangle2" type="text" name='name' value="<?php echo $row["name"]?>">  
+         <input  class="rectangle2" type="text" name='name' max='30' value="<?php echo $row["name"]?>">  
          
          
          
@@ -141,7 +141,7 @@ echo '<META HTTP-EQUIV="Refresh" Content="1.5; URL=admin.php">';
          
          
           <h3>ISBN :</h3>
-         <input  class="rectangle2" type="text" name='isbn' value="<?php echo $row["isbn"]?>">   
+         <input  class="rectangle2" type="text" name='isbn' max='13' value="<?php echo $row["isbn"]?>">   
         
         
         
