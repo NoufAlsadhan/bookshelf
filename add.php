@@ -88,7 +88,7 @@ echo '<META HTTP-EQUIV="Refresh" Content="1.5; URL=admin.php">';
          <div class="container" >
              <div class="left" >
          <h3> Brief:</h3>
-         <textarea class="rectangle" name="brief" required rows="4" cols="50"></textarea>
+         <textarea class="rectangle" name="brief" required rows="4" cols="50" max='500'></textarea>
              
              
          
@@ -97,17 +97,17 @@ echo '<META HTTP-EQUIV="Refresh" Content="1.5; URL=admin.php">';
       
          
          <h3>Number of pages :</h3>
-         <input  class="rectangle2"required type="number" name="num_pages" >
+         <input  class="rectangle2"required type="number" name="num_pages" max='10000' >
          
         <h3>Author name:</h3>
-         <input  class="rectangle2" required type="text" name="author_name" >
+         <input  class="rectangle2" required type="text" name="author_name" max='30'>
          
          </div>
           
            <div class="right">
          
           <h3>Name :</h3>
-         <input  class="rectangle2"required type="text" name="name" >  
+         <input  class="rectangle2"required type="text" name="name" max='30'>  
    
          
          
@@ -117,7 +117,7 @@ echo '<META HTTP-EQUIV="Refresh" Content="1.5; URL=admin.php">';
          
          
           <h3>ISBN :</h3>
-         <input  class="rectangle2"required type="text" name="isbn" >   
+         <input  class="rectangle2"required type="text" name="isbn" max='13' >   
        
         
         
