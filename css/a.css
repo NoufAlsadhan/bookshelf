@@ -1,3 +1,20 @@
+.fl_right{
+   background-color:rgba(255, 255, 255, 0.8);
+}
+
+
+.fl_right h2{
+   background-color:rgba(255, 255, 255, 0.8);
+}
+
+.fl_right p{
+   background-color:rgba(255, 255, 255, 0.8);
+}
+
 .fl_left{
-    background-color:white;
+     background-color:rgba(255, 255, 255, 0.8);
+}
+
+.intro{
+    background-color:rgba(255, 255, 255, 0.8);
 }
