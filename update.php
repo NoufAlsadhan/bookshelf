@@ -32,30 +32,49 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $check1 = mysqli_num_rows($run1);
     $rrow= mysqli_fetch_assoc($run1);
     if($check1 == 0 || ($check1==1 && $rrow['isbn']==$bb)) {
+        if(!empty($_POST['isbn']))
         $isbn = $_POST['isbn'];
+        else
+        $errs[] = 'Please fill all fields';    
     } else {
         $errs[] = 'Book already in system';
     }
-            $name=$_POST['name'];
-            $author_name=$_POST['author_name'];
+            if(empty( $_POST['name'] )) {
+                $errs[] = 'Please fill all fields';
+    } else {
+        $name = $_POST['name'];
+    }
+           if(empty( $_POST['author_name'] )) {
+                $errs[] = 'Please fill all fields';
+    } else {
+        $author_name = $_POST['author_name'];
+    }
            
-            $brief=$_POST['brief'];
-            $genre=$_POST['genre'];
+            if(empty( $_POST['brief'] )) {
+                $errs[] = 'Please fill all fields';
+    } else {
+        $brief = $_POST['brief'];
+    }
+            if(empty( $_POST['genre'] )) {
+                $errs[] = 'Please fill all fields';
+    } else {
+        $genre = $_POST['genre'];
+    }
             if(is_numeric( $_POST['available_quantity'] )) {
         $available_quantity = $_POST['available_quantity'];
     } else {
-        $errs[] = 'Quanitity must be number';
+        $errs[] = 'Please fill all fields';
     }
             if(is_numeric( $_POST['num_pages'] )) {
         $num_pages = $_POST['num_pages'];
     } else {
-        $errs[] = 'Number of pages must be number';
+        $errs[] = 'Please fill all fields';
     }
     
     if(is_numeric( $_POST['price'] )) {
         $price = $_POST['price'];
     } else {
-        $errs[] = 'Price must be a number only';
+        $errs[] = 'Please Fill all fields';
     }
     
     $file_name = $_FILES['myfile']['name'];
